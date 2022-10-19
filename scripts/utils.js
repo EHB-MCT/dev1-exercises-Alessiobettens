@@ -1,6 +1,6 @@
 "use strict";
 
-import context from "./context.js";
+import context from './context.js';
 
 export function drawLines(x1,y1,x2,y2) {
     context.beginPath();
