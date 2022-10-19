@@ -12,13 +12,14 @@ function draw() {
     drawGrid();
 }
 
+
 function drawGrid() {
-    let i = ;
-    while () {
-        let x = ;
-        let y = x;
-        Utils.drawLine(75, y, 325, y);
-        Utils.drawLine(x, 75, x, 325);
-        i = ;
+    let i = 0;
+    let step = 50;
+    let offset = 75;
+    while (i < 6) {
+        Utils.drawLines(offset, offset + (step * i), 325, offset + (step * i));
+        Utils.drawLines(75 + (step * i), 75, 75 + (step * i), 325);
+        i++;
     }
 }

@@ -14,10 +14,11 @@ function draw() {
 
 function drawCross() {
     let i = 0;
+    let step = 150;
+    let offset = 25;
     while (i < 5) {
-        let step = ;
-        Utils.drawLine(50, step, 350, step);
-        Utils.drawLine(step, 50, step, 350);
-        i = ;
+        Utils.drawLines(50, step + (offset * i), 350, step + (offset * i));
+        Utils.drawLines(step + (offset * i), 50, step + (offset * i), 350);
+        i++;
     }
 }
