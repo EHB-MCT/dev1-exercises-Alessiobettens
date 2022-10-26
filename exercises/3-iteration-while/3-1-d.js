@@ -13,9 +13,13 @@ function draw() {
 }
 
 function drawDiagonalLines() {
-    let i = ;
-    while (i <= ) {
-        Utils.drawLine(, , , );
-        i = ;
+    let i = 0;
+    let step = 25;
+    let offset = 50;
+    while (i <= 7) {
+        Utils.drawLines(offset, offset + (step * i), 175, offset + (step * i));
+        i++;
     }
 }
+
+/*offset, offset + (step * i), 325, offset + (step * i)*/
