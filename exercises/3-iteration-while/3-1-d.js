@@ -3,6 +3,7 @@ import context from "../../scripts/context.js";
 import * as Utils from "../../scripts/utils.js";
 
 draw();
+drawDiagonalLines();
 
 function draw() {
     context.lineWidth = 2;
@@ -14,12 +15,12 @@ function draw() {
 
 function drawDiagonalLines() {
     let i = 0;
-    let step = 25;
-    let offset = 50;
-    while (i <= 7) {
-        Utils.drawLines(offset, offset + (step * i), 175, offset + (step * i));
-        i++;
+    while (i <= 6) {
+       let x1 = 50+ i * 25;
+       let y1 = 200 + i * 25;
+       let x2 = 200+ i * 25;
+       let y2 = 50 + i * 25;
+       Utils.drawLine(x1, y1, x2, y2);
+       i= i + 1;
     }
 }
-
-/*offset, offset + (step * i), 325, offset + (step * i)*/
