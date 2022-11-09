@@ -1,27 +1,22 @@
 "use strict";
 
 import context from "../../scripts/context.js";
-
+import * as Utils from "../../scripts/Utils.js";
 
 
 let width = 600;
 let height = 300;
 
 
-
 let horizontal = 60;
 let vertical = 30;
-
 
 
 drawRectRed();
 drawLine();
 drawLineV();
 
-
-
 function drawRectRed() {
-
     context.fillStyle = '#FF9300';
     context.beginPath();
     context.rect(0, 0, 600, 300);
@@ -29,33 +24,22 @@ function drawRectRed() {
 }
 
 function drawLine() {
-
     let step = width / horizontal;
 
-
-
     for (let i = 0; i < 60; i++) {
-
         context.strokeStyle = "white";
         context.lineWidth = "2";
-        context.beginPath();
-        context.moveTo(0 + i * step, 0);
-        context.lineTo(width - i * step, height);
-        context.stroke();
+        Utils.drawLine(0 + i * step, 0, width - i * step, height);
     }
-
 }
 
-function drawLineV() {
 
+function drawLineV() {
     let step1 = height / vertical;
 
     for (let i = 0; i <= 30; i++) {
 
-        context.beginPath();
-        context.moveTo(0, 0 + i * step1);
-        context.lineTo(width, height - i * step1);
-        context.stroke();
-    }
+        Utils.drawLine(0, 0 + i * step1, width, height - i * step1);
 
+    }
 }
